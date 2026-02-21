@@ -5,7 +5,7 @@ import com.food.ordering.system.domain.valueobject.Money;
 import com.food.ordering.system.domain.valueobject.OrderApprovalStatus;
 import com.food.ordering.system.domain.valueobject.OrderStatus;
 import com.food.ordering.system.domain.valueobject.RestaurantId;
-import com.food.ordering.system.restaurant.service.domain.value.OrderApprovalId;
+import com.food.ordering.system.restaurant.service.domain.valueobject.OrderApprovalId;
 
 import java.util.List;
 import java.util.UUID;
