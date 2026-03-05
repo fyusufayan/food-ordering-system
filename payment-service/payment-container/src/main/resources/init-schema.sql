@@ -6,7 +6,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 DROP TYPE IF EXISTS payment_status;
 
-CREATE TYPE payment_status AS ENUM ('COMPLETED', 'CANCELED', 'FAILED');
+CREATE TYPE payment_status AS ENUM ('COMPLETED', 'CANCELLED', 'FAILED');
 
 CREATE TABLE "payment".payments
 (
@@ -27,7 +27,7 @@ CREATE TABLE "payment".credit_entry
     customer_id uuid NOT NULL,
     total_credit_amount numeric(10, 2) NOT NULL,
     CONSTRAINT credit_entry_pkey PRIMARY KEY (id)
-)
+);
 
 DROP TYPE IF EXISTS transaction_type;
 
@@ -42,4 +42,4 @@ CREATE TABLE "payment".credit_history
     amount numeric(10, 2) NOT NULL,
     type transaction_type NOT NULL,
     CONSTRAINT credit_history_pkey PRIMARY KEY (id)
-)
+);
